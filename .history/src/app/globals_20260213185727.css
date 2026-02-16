@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1A3A3A;
+  --foreground: #f0f0f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-play);
+}
+
+h1 {
+  color: red;
+  font-size: 35px;
+}

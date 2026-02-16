@@ -1,0 +1,141 @@
+.story {
+  background: #000;
+  padding: 120px 0;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(20, 184, 166, 0.15);
+  color: #14b8a6;
+  font-size: 14px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.title span {
+  background: linear-gradient(90deg, #14b8a6, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* FLOATING CARD */
+.floatingCard {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: rgba(30, 30, 30, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 20px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(20, 184, 166, 0.15);
+  color: #14b8a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.floatingCard h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.floatingCard p {
+  font-size: 14px;
+  margin: 4px 0 0;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description {
+    margin: 0 auto 20px;
+  }
+
+  .floatingCard {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .imageWrapper {
+    height: 380px;
+  }
+}
