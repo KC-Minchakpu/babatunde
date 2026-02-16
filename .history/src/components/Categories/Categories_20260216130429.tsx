@@ -38,9 +38,10 @@ const categories = [
     color: "cyan",
   },
   {
-    title: "MacBook Repairs",
-    description: "Repairing and maintaining MacBooks",
-    icon: "💻",
+    title: "Cloud Computing",
+    description: "Deploy scalable cloud solutions",
+    courses: "65 courses",
+    icon: "☁️",
     color: "indigo",
   },
   {
