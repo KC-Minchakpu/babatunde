@@ -15,10 +15,10 @@ const Header = () => {
         <div className={styles.logo}>
           <Link href="/">
             <Image
-              src="/images/logo23.png" 
+              src="/images/logo.png" 
               alt="Baba T Logo"
-              width={60} 
-              height={60} 
+              width={90} 
+              height={90} 
             />
           </Link>
           <span className={styles.logoText}>Baba T</span>

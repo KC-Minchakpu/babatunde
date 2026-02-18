@@ -1,0 +1,141 @@
+/* ==============================
+   TESTIMONIAL SECTION
+================================ */
+.testimonials {
+  background: linear-gradient(180deg, #0a122f 0%, #0c1a3a 100%);
+  padding: 100px 20px;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* ==============================
+   HEADINGS
+================================ */
+.smallTitle {
+  color: #7c8cff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+/* ==============================
+   GRID
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==============================
+   CARD
+================================ */
+.card {
+  background: #101b3f;
+  padding: 35px 30px;
+  border-radius: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==============================
+   STARS
+================================ */
+.stars {
+  color: #ffc107;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+}
+
+/* ==============================
+   TEXT
+================================ */
+.text {
+  font-size: 0.95rem;
+  color: #dbe2f1;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.course {
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  color: #9fb3ff;
+}
+
+.course span {
+  color: #7c8cff;
+}
+
+/* ==============================
+   PROFILE
+================================ */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.profile p {
+  margin: 3px 0 0;
+  font-size: 0.85rem;
+  color: #aab6d6;
+}

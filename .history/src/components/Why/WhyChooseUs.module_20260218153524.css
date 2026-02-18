@@ -1,0 +1,78 @@
+/* components/WhyChooseUs.module.css */
+
+.container {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #0f1c3f;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  background-color: #ffc107; /* Yellow background */
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f1c3f;
+  margin: 0;
+}
+
+.featureDescription {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin: 0.25rem 0 0 0;
+}
+
+.imageWrapper {
+  flex: 0 0 auto;
+}
+
+.centerImage {
+  border-radius: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    margin: 2rem 0;
+  }
+}

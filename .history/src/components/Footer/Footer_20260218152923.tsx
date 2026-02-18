@@ -2,24 +2,18 @@
 
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import { 
-  FaXTwitter, 
-  FaLinkedinIn, 
-  FaYoutube, 
-  FaInstagram 
-} from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.topSection}>
-          
           {/* LEFT BRAND AREA */}
           <div className={styles.brand}>
             <div className={styles.logo}>
+              {/* IMAGE LOGO */}
               <Image
-                src="/images/logo23.png"
+                src="/images/logo.png" 
                 alt="Baba T Logo"
                 width={50}
                 height={50}
@@ -32,20 +26,11 @@ export default function Footer() {
               trusted by 100,000+ Clients worldwide.
             </p>
 
-            {/* SOCIAL ICONS */}
             <div className={styles.socials}>
-              <a href="#" aria-label="Twitter">
-                <FaXTwitter />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <FaLinkedinIn />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <FaYoutube />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <FaInstagram />
-              </a>
+              <span>𝕏</span>
+              <span>in</span>
+              <span>▶</span>
+              <span>📷</span>
             </div>
           </div>
 
@@ -87,8 +72,10 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* DIVIDER */}
         <div className={styles.divider}></div>
 
+        {/* BOTTOM BAR */}
         <div className={styles.bottomBar}>
           <p>© 2026 Baba T Engineering. All rights reserved.</p>
           <p>Designed & Developed by Kevin Cross Minchakpu</p>
