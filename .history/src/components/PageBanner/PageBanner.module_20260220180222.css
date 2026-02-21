@@ -1,0 +1,102 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.default {
+   background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    ),
+}
+
+/* ===========================
+   Background Variants
+=========================== */
+
+.about {
+   background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    ),
+}
+
+.contact {
+  background-color: #0f172a; /* Dark blue */
+}
+
+.services {
+  background-color: #1e293b; /* Slate */
+}
+
+.student-life {
+  background-color: #334155; /* Dark slate */
+}
+.team {
+   background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    ), /* Gray */
+}
+.blog {
+  background-color: #64748b; /* Light slate */
+}
+
+/* ===========================
+   Overlay
+=========================== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    ),
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #444444;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: #444444;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.current {
+  opacity: 0.85;
+}

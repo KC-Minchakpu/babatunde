@@ -1,0 +1,198 @@
+.wrapper {
+  background: #f4f4f4;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* MAP */
+
+.mapWrapper {
+  height: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* RIGHT SIDE */
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* INFO CARDS */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.infoCard {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  background: #fbe8d5;
+  color: #e87500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.infoCard h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.infoCard p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* FORM CARD */
+
+.formCard {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.bar {
+  width: 4px;
+  height: 24px;
+  background: #e87500;
+  border-radius: 2px;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #e87500;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.button {
+  background: #e87500;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: #cf6700;
+}
+
+/* SOCIAL ICONS */
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials span {
+  width: 35px;
+  height: 35px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.socials span:hover {
+  background: #e87500;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .mapWrapper {
+    height: 400px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formFooter {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}

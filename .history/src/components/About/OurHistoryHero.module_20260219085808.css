@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 6rem;
+  background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    );
+    
+  color: #242424;
+}
+
+.content {
+  max-width: 960px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  background: #242424;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color:#ffffff;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color:#242424
+}
+
+.heading span {
+  background: #242424;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #242424;
+  max-width: 600px;
+}

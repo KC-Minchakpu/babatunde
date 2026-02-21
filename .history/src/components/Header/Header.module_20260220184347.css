@@ -1,0 +1,148 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background: #0F1A20;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logoCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.logoText {
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Play', sans-serif;
+  
+}
+
+.nav a,
+.dropdownToggle {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 19px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.dropdownToggle:hover {
+  color: #FFD23F;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  width: 250px;
+  top: 35px;
+  left: 0;
+  background: #0F1A20;
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownMenu a {
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdownMenu a:hover {
+  color: #FFD23F;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.signIn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: #143458;
+  font-size: 14px;
+}
+
+.signUp {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: #63054b;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+}
+
+.active {
+  color: #00d1ff;
+  font-weight: 600;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #00d1ff;
+}

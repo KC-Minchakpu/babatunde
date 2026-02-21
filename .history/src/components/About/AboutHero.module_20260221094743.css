@@ -1,0 +1,76 @@
+.hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  overflow: hidden;
+  color: white;
+}
+
+/* Dark blue engineering overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #242a38cc; 
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f59e0b; /* engineering amber */
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  max-width: 600px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .hero {
+    height: 480px;
+    padding: 0 6%;
+  }
+
+  .heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 420px;
+    padding: 0 5%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
