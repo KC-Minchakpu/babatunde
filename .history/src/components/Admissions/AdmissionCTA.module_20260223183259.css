@@ -1,0 +1,91 @@
+.ctaSection {
+  padding: 80px 20px;
+  background-color: #f9fbfc;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBox {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid #cfe8ee;
+  border-radius: 20px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+/* Icon */
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px auto;
+  background-color: #1597a6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Title */
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f2b33;
+  margin-bottom: 15px;
+}
+
+/* Description */
+
+.description {
+  font-size: 16px;
+  color: #6b7c85;
+  max-width: 600px;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+}
+
+/* Buttons */
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+
+.primaryBtn {
+  background-color: #1597a6;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primaryBtn:hover {
+  background-color: #117e8b;
+}
+
+/* Secondary Button */
+
+.secondaryBtn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #cfd8dc;
+  color: #34454d;
+  transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+  border-color: #073c42;
+  color: #1597a6;
+}
