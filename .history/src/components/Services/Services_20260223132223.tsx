@@ -52,19 +52,19 @@ const services = [
   {
     title: "ITF Student Training",
     description:
-      "Structured Industrial Training Fund (ITF) programs designed to equip students with practical, hands-on engineering experience. Our training bridges academic theory with real-world technical applications, preparing students for professional excellence in engineering and related fields. ",
+      "We provide expert tablet motherboard repair for devices experiencing charging problems, no power, display faults, or system failure. Our careful diagnostics and micro-soldering expertise ensure your tablet is restored safely and efficiently.",
     icon: Users,
   },
   {
     title: "Mentorship & Startup Support",
     description:
-      "Comprehensive mentorship and startup support services focused on nurturing innovation and technical entrepreneurship. We guide emerging engineers and startups with industry insights, technical advisory, project development support, and strategic direction to transform ideas into sustainable engineering solutions.",
+      "We provide expert tablet motherboard repair for devices experiencing charging problems, no power, display faults, or system failure. Our careful diagnostics and micro-soldering expertise ensure your tablet is restored safely and efficiently.",
     icon: Users,
   },
   {
     title: "BIOS Repair & Recovery",
     description:
-      "Professional diagnostics and replacement of faulty BIOS chips and integrated circuits (ICs) to restore optimal system functionality. Our service ensures precise component-level troubleshooting, safe chip reprogramming, and reliable hardware recovery for computers and embedded electronic systems.",
+      "We provide expert tablet motherboard repair for devices experiencing charging problems, no power, display faults, or system failure. Our careful diagnostics and micro-soldering expertise ensure your tablet is restored safely and efficiently.",
     icon: Cpu,
   },
 ];

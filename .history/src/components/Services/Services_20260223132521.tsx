@@ -64,7 +64,7 @@ const services = [
   {
     title: "BIOS Repair & Recovery",
     description:
-      "Professional diagnostics and replacement of faulty BIOS chips and integrated circuits (ICs) to restore optimal system functionality. Our service ensures precise component-level troubleshooting, safe chip reprogramming, and reliable hardware recovery for computers and embedded electronic systems.",
+      "We provide expert tablet motherboard repair for devices experiencing charging problems, no power, display faults, or system failure. Our careful diagnostics and micro-soldering expertise ensure your tablet is restored safely and efficiently.",
     icon: Cpu,
   },
 ];
