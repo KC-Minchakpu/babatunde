@@ -76,12 +76,7 @@ export default function Services() {
         <h2 className={styles.title}>Services</h2>
 
         <p className={styles.subtitle}>
-         Baba T. Engineering Limited offers specialized technical and engineering solutions with a focus 
-         on precision and innovation. Our services include laptop motherboard repair, chip-level 
-         diagnostics, BIOS and IC replacement, hardware troubleshooting, and general laptop servicing. 
-         Beyond technical repairs, we provide professional development through technical training, 
-         engineering courses, ITF student training, mentorship programs, and startup support—empowering
-         the next generation of engineers and innovators.
+         Baba T. Engineering Limited offers specialized technical and engineering solutions with a focus on precision and innovation. Our services include laptop motherboard repair, chip-level diagnostics, BIOS and IC replacement, hardware troubleshooting, and general laptop servicing. Beyond technical repairs, we provide professional development through technical training, engineering courses, ITF student training, mentorship programs, and startup support—empowering the next generation of engineers and innovators.
         </p>
 
         <div className={styles.grid}>
