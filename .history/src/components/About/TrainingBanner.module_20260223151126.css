@@ -1,0 +1,134 @@
+.hero {
+  background: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0.95),
+      rgba(248, 250, 252, 0.8)
+    );
+  padding: 100px 0;
+  width: 100%;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+
+.left {
+  flex: 1;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.description {
+  font-size: 18px;
+  color: #3d3e3f;
+  margin-bottom: 32px;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primaryBtn {
+  background-color: #043c57;
+  color: #ffffff;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #fdb13e;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #222222;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #222222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* RIGHT SIDE */
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #374151;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+
+  .imageCard {
+    height: 300px;
+  }
+}

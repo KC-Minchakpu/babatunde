@@ -71,7 +71,7 @@ const Header = () => {
                 <Link href="/about/values" className={isActive("/about/values") ? styles.active : ""}>
                   Core Values
                 </Link>
-                <Link href="/about/trainings" className={isActive("/about/trainings") ? styles.active : ""}>
+                <Link href="/about/careers" className={isActive("/about/careers") ? styles.active : ""}>
                   Trainings
                 </Link>
               </div>
