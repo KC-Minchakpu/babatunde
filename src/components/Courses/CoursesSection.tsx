@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./CoursesSection.module.css";
 import { Search, Star } from "lucide-react";
@@ -8,77 +9,73 @@ import { Search, Star } from "lucide-react";
 interface Course {
   id: number;
   title: string;
+  description: string; // ✅ NEW
   category: string;
   instructor: string;
   rating: number;
   reviews: number;
   students: number;
-  price: number;
-  oldPrice: number;
+  duration: string;
   level: string;
   image: string;
-  bestseller?: boolean;
-  sale?: boolean;
 }
 
 const baseCourses: Course[] = [
   {
     id: 1,
-    title: "Complete Machine Learning & AI Bootcamp",
-    category: "DATA & ANALYTICS",
+    title: "Literacy Course",
+    description:
+      "Master the skills of reading, writing, and communication to unlock new opportunities in education and career.",
+    category: "CAREER TRAINING",
     instructor: "Dr. Maya Chen",
     rating: 4.96,
     reviews: 4823,
     students: 32500,
-    price: 149,
-    oldPrice: 299,
+    duration: "12 weeks",
     level: "Intermediate",
     image: "/images/motherboard.jpg",
-    bestseller: true,
-    sale: true,
   },
   {
     id: 2,
-    title: "Advanced UI/UX Design Masterclass",
-    category: "CREATIVE DESIGN",
-    instructor: "Marcus Thompson",
+    title: "Hardware Engineering",
+    description:
+      "Learn to repair, install, and optimize computer hardware components for performance.",
+    category: "CAREER TRAINING",
+    instructor: "Baba T",
     rating: 4.92,
     reviews: 2156,
     students: 18400,
-    price: 129,
-    oldPrice: 249,
+    duration: "8 weeks",
     level: "Advanced",
     image: "/images/motherboard.jpg",
-    sale: true,
   },
   {
     id: 3,
-    title: "Full-Stack React & Node.js Development",
-    category: "SOFTWARE ENGINEERING",
+    title: "Chip Level Engineering",
+    description:
+      "Learn the fundamentals of semiconductor design and digital logic circuits.",
+    category: "CAREER TRAINING",
     instructor: "Elena Rodriguez",
     rating: 4.94,
     reviews: 5642,
     students: 41200,
-    price: 169,
-    oldPrice: 349,
+    duration: "10 weeks",
     level: "Intermediate",
     image: "/images/motherboard.jpg",
-    bestseller: true,
-    sale: true,
   },
   {
     id: 4,
     title: "Growth Marketing: From Zero to Scale",
+    description:
+      "Learn data-driven marketing strategies to grow brands from startup to scale.",
     category: "DIGITAL MARKETING",
     instructor: "James Okonkwo",
     rating: 4.89,
     reviews: 1834,
     students: 15600,
-    price: 99,
-    oldPrice: 199,
+    duration: "6 weeks",
     level: "All Levels",
     image: "/images/motherboard.jpg",
-    sale: true,
   },
 ];
 
@@ -92,15 +89,16 @@ const courses: Course[] = [
 
 export default function CoursesSection() {
   const [search, setSearch] = useState("");
+  const router = useRouter();
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
-          <h2>Explore Our Courses</h2>
+          <h2>Explore Our Programs</h2>
           <p>
-            Discover 8 expert-led courses designed to help you master new
+            Discover our expert-led programs designed to help you master new
             skills and advance your career
           </p>
         </div>
@@ -108,10 +106,8 @@ export default function CoursesSection() {
         {/* Filters */}
         <div className={styles.filters}>
           <div className={styles.searchBox}>
-            <label htmlFor="search" className={styles.visuallyHidden}></label>
             <Search size={18} />
             <input
-              id="search"
               type="text"
               placeholder="Search courses..."
               value={search}
@@ -121,19 +117,13 @@ export default function CoursesSection() {
 
           <div className={styles.selectGroup}>
             <div className={styles.selectWrapper}>
-              <label htmlFor="category" className={styles.visuallyHidden}>
-                Filter by category
-              </label>
-              <select id="category">
+              <select aria-label="Filter by category">
                 <option>All Categories</option>
               </select>
             </div>
 
             <div className={styles.selectWrapper}>
-              <label htmlFor="level" className={styles.visuallyHidden}>
-                Filter by level
-              </label>
-              <select id="level">
+              <select aria-label="Filter by level">
                 <option>All Levels</option>
               </select>
             </div>
@@ -152,15 +142,6 @@ export default function CoursesSection() {
                   className={styles.image}
                 />
 
-                <div className={styles.badges}>
-                  {course.bestseller && (
-                    <span className={styles.bestseller}>Bestseller</span>
-                  )}
-                  {course.sale && (
-                    <span className={styles.sale}>Sale</span>
-                  )}
-                </div>
-
                 <span className={styles.level}>{course.level}</span>
               </div>
 
@@ -168,12 +149,19 @@ export default function CoursesSection() {
                 <span className={styles.category}>
                   {course.category}
                 </span>
+
                 <h3>{course.title}</h3>
+
+                {/* ✅ NEW DESCRIPTION */}
+                <p className={styles.description}>
+                  {course.description}
+                </p>
+
                 <p className={styles.instructor}>
                   by {course.instructor}
                 </p>
 
-                  <div className={styles.rating}>
+                <div className={styles.rating}>
                   <Star size={14} />
                   <strong>{course.rating}</strong>
                   <span>({course.reviews.toLocaleString()})</span>
@@ -182,13 +170,17 @@ export default function CoursesSection() {
                   </span>
                 </div>
 
-                <div className={styles.price}>
-                  <span className={styles.newPrice}>
-                    ${course.price}
+                <div className={styles.footer}>
+                  <span className={styles.duration}>
+                    {course.duration}
                   </span>
-                  <span className={styles.oldPrice}>
-                    ${course.oldPrice}
-                  </span>
+
+                  <button
+                    className={styles.enrollBtn}
+                    onClick={() => router.push(`/courses/${course.id}`)}
+                  >
+                    Enroll Now
+                  </button>
                 </div>
               </div>
             </div>

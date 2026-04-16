@@ -13,7 +13,7 @@ export default function ProgramHero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Build skills with our courses and mentor from world-class companies.
+          Build skills with our courses and mentor from world-class Instructors.
         </p>
 
         {/* Rating Card */}
