@@ -11,8 +11,8 @@ type ImageType = {
 };
 
 const images: ImageType[] = Array.from({ length: 36 }).map((_, i) => ({
-  src: `/images/img${(i % 9) + 1}.webp`,
-  title: "Fading Light",
+  src: `/images/img${i + 1}.webp`,
+  title: `Photo ${i + 1}`,
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.",
 }));
