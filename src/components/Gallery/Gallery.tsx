@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Gallery.module.css";
 
@@ -11,7 +11,7 @@ type ImageType = {
 };
 
 const images: ImageType[] = Array.from({ length: 36 }).map((_, i) => ({
-  src: `/images/img${(i % 9) + 1}.jpg`, // reuse 9 images
+  src: `/images/img${(i % 9) + 1}.webp`,
   title: "Fading Light",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.",
@@ -23,24 +23,38 @@ export default function Gallery() {
   const closeModal = () => setSelectedIndex(null);
 
   const nextImage = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex((prev) =>
-        prev !== null ? (prev + 1) % images.length : 0
-      );
-    }
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev + 1) % images.length : 0
+    );
   };
 
   const prevImage = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex((prev) =>
-        prev !== null ? (prev - 1 + images.length) % images.length : 0
-      );
-    }
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev - 1 + images.length) % images.length : 0
+    );
   };
+
+  // ✅ Keyboard controls
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [selectedIndex]);
 
   return (
     <section className={styles.gallerySection}>
       <h1 className={styles.title}>Portrait Gallery</h1>
+
+      <p className={styles.description}>
+        Explore a curated collection of our past graduation portraits, and other memorable moments.
+      </p>
 
       <div className={styles.grid}>
         {images.map((img, index) => (
@@ -59,17 +73,28 @@ export default function Gallery() {
         ))}
       </div>
 
+      {/* ✅ MODAL */}
       {selectedIndex !== null && (
-        <div className={styles.modal}>
-          <button className={styles.closeBtn} onClick={closeModal} aria-label="Close modal">
-  &times;
-</button>
+        <div className={styles.modal} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              className={styles.closeBtn}
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
 
-          <button className={styles.prev} onClick={prevImage}>
-            ❮
-          </button>
+            {/* Prev */}
+            <button className={styles.prev} onClick={prevImage}>
+              ❮
+            </button>
 
-          <div className={styles.modalContent}>
+            {/* Image */}
             <div className={styles.modalImageWrapper}>
               <Image
                 src={images[selectedIndex].src}
@@ -79,15 +104,17 @@ export default function Gallery() {
               />
             </div>
 
+            {/* Caption */}
             <div className={styles.caption}>
               <h3>{images[selectedIndex].title}</h3>
               <p>{images[selectedIndex].description}</p>
             </div>
-          </div>
 
-          <button className={styles.next} onClick={nextImage}>
-            ❯
-          </button>
+            {/* Next */}
+            <button className={styles.next} onClick={nextImage}>
+              ❯
+            </button>
+          </div>
         </div>
       )}
     </section>
