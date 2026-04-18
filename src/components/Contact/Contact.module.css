@@ -189,3 +189,69 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
 }
+
+/* ================================
+   MAP SECTION
+================================ */
+.mapSection {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+/* Full width map */
+.map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+/* Floating info card */
+.mapCard {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+}
+
+.mapCard h3 {
+  margin-bottom: 10px;
+  color: #1d2333;
+}
+
+.mapCard p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.mapCard a {
+  font-size: 0.9rem;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mapCard a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .mapSection {
+    height: 400px;
+  }
+
+  .mapCard {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 90%;
+  }
+}
