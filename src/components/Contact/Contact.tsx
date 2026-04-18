@@ -27,7 +27,7 @@ export default function ContactPage() {
           <div className={styles.infoCard}>
             <div className={styles.infoItem}>
               <h3>Email Address</h3>
-              <p>support@startup.com</p>
+              <p>support@babatengineering.com</p>
             </div>
 
             <div className={styles.infoItem}>
@@ -39,12 +39,12 @@ export default function ContactPage() {
 
             <div className={styles.infoItem}>
               <h3>Phone Number</h3>
-              <p>+009 8754 3433 223</p>
+              <p>+234 803 059 6339</p>
             </div>
 
             <div className={styles.infoItem}>
               <h3>WhatsApp Number</h3>
-              <p>+009 8754 3433 223</p>
+              <p>+234 803 059 6339</p>
             </div>
 
             <div className={styles.divider}></div>
@@ -66,19 +66,19 @@ export default function ContactPage() {
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label>Full name</label>
-                  <input type="text" placeholder="David Wonder" />
+                  <input type="text" placeholder="Kevin Cross Minchakpu" />
                 </div>
 
                 <div className={styles.inputGroup}>
                   <label>Email address</label>
-                  <input type="email" placeholder="example@gmail.com" />
+                  <input type="email" placeholder="kevinomics101@gmail.com" />
                 </div>
               </div>
 
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label>Phone number</label>
-                  <input type="text" placeholder="+009 3342 3432" />
+                  <input type="text" placeholder="+234 803 059 6339" />
                 </div>
 
                 <div className={styles.inputGroup}>
