@@ -112,24 +112,6 @@ export default function ContactPage() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-
-        {/* Overlay Card */}
-        <div className={styles.mapCard}>
-          <h3>Visit Our Office</h3>
-          <p>
-            ZEY HUB <br />
-            Aminu Kano Crescent <br />
-            Wuse II, Abuja
-          </p>
-
-          <a
-            href="https://maps.app.goo.gl/d1pQxAUVst5hQdCF8"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get Directions →
-          </a>
-        </div>
       </div>
     </>
   );
