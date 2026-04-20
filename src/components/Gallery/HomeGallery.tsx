@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import styles from "./Gallery.module.css";
+import styles from "./HomeGallery.module.css";
 
 type ImageType = {
   src: string;
@@ -10,14 +10,30 @@ type ImageType = {
   description: string;
 };
 
-const images: ImageType[] = Array.from({ length: 36 }).map((_, i) => ({
-  src: `/images/img${i + 1}.webp`,
-  title: `Photo ${i + 1}`,
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.",
-}));
+const images: ImageType[] = [
+  {
+    src: "/images/img1.jpg",
+    title: "Fading Light",
+    description: "A quiet forest fading into mist.",
+  },
+  {
+    src: "/images/img2.jpg",
+    title: "Forest Path",
+    description: "A calm walk through towering trees.",
+  },
+  {
+    src: "/images/img3.jpg",
+    title: "Butterflies",
+    description: "Delicate motion captured in stillness.",
+  },
+  {
+    src: "/images/img4.jpg",
+    title: "Flowing Stream",
+    description: "Nature’s rhythm in motion.",
+  },
+];
 
-export default function Gallery() {
+export default function HomeGallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const closeModal = () => setSelectedIndex(null);
@@ -34,7 +50,7 @@ export default function Gallery() {
     );
   };
 
-  // ✅ Keyboard controls
+  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (selectedIndex === null) return;
@@ -50,12 +66,9 @@ export default function Gallery() {
 
   return (
     <section className={styles.gallerySection}>
-      <h1 className={styles.title}>Training Gallery</h1>
+      <h2 className={styles.title}>Portrait Gallery</h2>
 
-      <p className={styles.description}>
-        Explore a curated collection of our past graduation portraits, and other memorable moments.
-      </p>
-
+      {/* 4x1 GRID */}
       <div className={styles.grid}>
         {images.map((img, index) => (
           <div
@@ -73,7 +86,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* ✅ MODAL */}
+      {/* MODAL */}
       {selectedIndex !== null && (
         <div className={styles.modal} onClick={closeModal}>
           <div
@@ -81,7 +94,7 @@ export default function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
-          <button
+            <button
   type="button"
   className={styles.closeBtn}
   onClick={closeModal}

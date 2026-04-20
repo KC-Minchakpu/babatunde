@@ -5,6 +5,7 @@ import Categories from "@/components/Categories/Categories";
 import WhyChooseUs from "@/components/Why/WhyChooseUs";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Contact from "@/components/Contact/Contact";
+import HomeGallery from "@/components/Gallery/HomeGallery";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Categories />
       <WhyChooseUs />
       <Testimonials />
+      <HomeGallery />
       <Contact />
      </main>
     </>
