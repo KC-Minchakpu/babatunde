@@ -50,7 +50,7 @@ export default function Gallery() {
 
   return (
     <section className={styles.gallerySection}>
-      <h1 className={styles.title}>Training Gallery</h1>
+      <h1 className={styles.title}>Our Gallery</h1>
 
       <p className={styles.description}>
         Explore a curated collection of our past graduation portraits, and other memorable moments.

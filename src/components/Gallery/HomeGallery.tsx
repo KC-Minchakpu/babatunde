@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./HomeGallery.module.css";
+import Link from "next/link";
 
 type ImageType = {
   src: string;
@@ -84,6 +85,15 @@ export default function HomeGallery() {
             />
           </div>
         ))}
+      </div>
+
+      {/* ✅ VIEW MORE BUTTON */}
+      <div className={styles.buttonWrapper}>
+        <Link href="/gallery">
+          <button type="button" className={styles.viewMoreBtn}>
+            View More →
+          </button>
+        </Link>
       </div>
 
       {/* MODAL */}
