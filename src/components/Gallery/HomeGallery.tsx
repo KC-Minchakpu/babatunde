@@ -12,22 +12,22 @@ type ImageType = {
 
 const images: ImageType[] = [
   {
-    src: "/images/img1.jpg",
+    src: "/images/img1.webp",
     title: "Fading Light",
     description: "A quiet forest fading into mist.",
   },
   {
-    src: "/images/img2.jpg",
+    src: "/images/img2.webp",
     title: "Forest Path",
     description: "A calm walk through towering trees.",
   },
   {
-    src: "/images/img3.jpg",
+    src: "/images/img3.webp",
     title: "Butterflies",
     description: "Delicate motion captured in stillness.",
   },
   {
-    src: "/images/img4.jpg",
+    src: "/images/img4.webp",
     title: "Flowing Stream",
     description: "Nature’s rhythm in motion.",
   },
