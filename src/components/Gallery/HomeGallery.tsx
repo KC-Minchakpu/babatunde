@@ -67,7 +67,7 @@ export default function HomeGallery() {
 
   return (
     <section className={styles.gallerySection}>
-      <h2 className={styles.title}>Portrait Gallery</h2>
+      <h2 className={styles.title}>Our Gallery</h2>
 
       {/* 4x1 GRID */}
       <div className={styles.grid}>
