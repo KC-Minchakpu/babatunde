@@ -33,7 +33,7 @@ const baseCourses: Course[] = [
     students: 32500,
     duration: "12 weeks",
     level: "Intermediate",
-    image: "/images/motherboard.jpg",
+    image: "/images/read.jpg",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const baseCourses: Course[] = [
     students: 18400,
     duration: "8 weeks",
     level: "Advanced",
-    image: "/images/motherboard.jpg",
+    image: "/images/engineer.jpg",
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const baseCourses: Course[] = [
     students: 41200,
     duration: "10 weeks",
     level: "Intermediate",
-    image: "/images/motherboard.jpg",
+    image: "/images/chip.jpg",
   },
   {
     id: 4,
